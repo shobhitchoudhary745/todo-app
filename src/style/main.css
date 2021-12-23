@@ -1,0 +1,84 @@
+#head{
+    text-align: center;
+    color:dodgerblue;
+    font-size:29px;
+}
+#submit{
+    background-color: dodgerblue;
+    color:white;
+    cursor: pointer;
+}
+#submit:hover{
+    opacity:0.7;
+}
+li{
+    border:1.4px solid dodgerblue;
+    padding:6px;
+    margin-bottom:16px;
+    border-radius:5px;
+    overflow-x: hidden;
+    list-style-type: none;
+    position:relative;
+    margin-left:-14px;
+    margin-right:14px;
+    
+}
+
+
+ 
+.edit{
+    cursor:pointer;
+    position:absolute;
+    right:22px;
+    font-size:22px;
+    
+}
+.edit:hover{
+    color:green;
+}
+.delete{
+    cursor:pointer;
+    position:absolute;
+    right:4px;
+    font-size:20px;
+}
+.delete:hover{
+    color:red;
+}
+#lad{
+    cursor:pointer;
+    color:blue;
+    text-align: right;
+    align-items:right;
+    
+}
+
+span{
+    text-decoration:underline;
+}
+#edittodos{
+    width:345px;
+    border-radius:5px;
+    box-shadow:2px 2px 2px 2px #888888;
+    background-color: white;
+    align-items:center;
+    margin:auto;
+    margin-top:20px;
+    text-align:center;
+    display:none;
+}
+#edi{
+    margin-top:20px;
+    width:250px;
+}
+#sub{
+    background-color: dodgerblue;
+    color:white;
+    width:250px;
+}
+#cross{
+    font-size:20px;
+    text-align:right;
+    cursor:pointer;
+    padding-right: 8px;
+}
