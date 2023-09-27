@@ -17,7 +17,7 @@ function Signup(){
       let year=document.querySelector('#year').value;
       let age=date+"/"+month+"/"+year;
     
-      fetch(`https://task-app-backendcode.herokuapp.com/users`,{
+      fetch(`https://todoappbackend-uwq1.onrender.com/users`,{
          method:'post',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify({

@@ -9,7 +9,7 @@ function Forgot(){
       e.preventDefault()
       let email=document.querySelector('#input1').value
       
-      fetch(`https://task-app-backendcode.herokuapp.com/forget`, {
+      fetch(`https://todoappbackend-uwq1.onrender.com//forget`, {
       method: "post",headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
       email
@@ -31,7 +31,7 @@ function Forgot(){
        const newpassword=document.querySelector('#input2').value
        const otp=document.querySelector('#otpvalue').value
        const email=localStorage.getItem('email')
-      fetch(`https://task-app-backendcode.herokuapp.com/setnewpassword`, {
+      fetch(`https://todoappbackend-uwq1.onrender.com/setnewpassword`, {
       method: "post",headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
       email,newpassword,otp

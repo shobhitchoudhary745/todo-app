@@ -10,7 +10,7 @@ const [id,setId]=useState('')
    useEffect(()=>{
        if(!localStorage.getItem('token'))
        navigate('/')
-       fetch('https://task-app-backendcode.herokuapp.com/tasks/me',{
+       fetch('https://todoappbackend-uwq1.onrender.com/tasks/me',{
            method:'get',headers:{'Content-Type':'application/json','Authorization':`${localStorage.getItem('token')}`}
        }).then(data=>{
            return data.json()
@@ -24,7 +24,7 @@ const [id,setId]=useState('')
 function logout(){
     let con=window.confirm('are you sure you want to logout?')
     if(con){
-        fetch('https://task-app-backendcode.herokuapp.com/users/logout',{
+        fetch('https://todoappbackend-uwq1.onrender.com/users/logout',{
             method:'post',headers:{ "Content-Type": "application/json","Authorization":`${localStorage.getItem('token')}`},
         }).then(data=>{
             localStorage.removeItem('token')
@@ -48,7 +48,7 @@ function finaledit(e){
     
     let value=document.querySelector('#edi').value
     console.log(value)
-    fetch(`https://task-app-backendcode.herokuapp.com/taasks/${id}`,{
+    fetch(`https://todoappbackend-uwq1.onrender.com/taasks/${id}`,{
         method:'post',headers:{'Content-Type':'application/json'},
         body:JSON.stringify({description:value})
     }).then(data=>{ 
@@ -62,7 +62,7 @@ function finaledit(e){
 }
 
 function deletetodo(e){
-  fetch(`https://task-app-backendcode.herokuapp.com/tasks/${e.target.id}`,{
+  fetch(`https://todoappbackend-uwq1.onrender.com/tasks/${e.target.id}`,{
       method:'delete',headers:{'Content-Type':'application/json'},
       
   }).then(data=>{
@@ -82,7 +82,7 @@ function closeedit(){
 function logoutall(){
     let con=window.confirm('are you sure you want to logout from all devices?')
     if(con){
-        fetch('https://task-app-backendcode.herokuapp.com/users/logoutAll',{
+        fetch('https://todoappbackend-uwq1.onrender.com/users/logoutAll',{
             method:'post',headers:{ "Content-Type": "application/json","Authorization":`${localStorage.getItem('token')}`},
         }).then(data=>{
             localStorage.removeItem('token')
@@ -94,7 +94,7 @@ function logoutall(){
 function deleted(){
     let con=window.confirm('are you sure you want to delete your account?')
     if(con){
-        fetch('https://task-app-backendcode.herokuapp.com/users/me',{
+        fetch('https://todoappbackend-uwq1.onrender.com/users/me',{
             method:'delete',headers:{ "Content-Type": "application/json","Authorization":`${localStorage.getItem('token')}`},
         }).then(data=>{
             localStorage.removeItem('token')
@@ -106,7 +106,7 @@ function deleted(){
        e.preventDefault()
        let description =document.querySelector('#todo').value
        document.querySelector('#todo').value=""
-       fetch('https://task-app-backendcode.herokuapp.com/tasks',{
+       fetch('https://todoappbackend-uwq1.onrender.com/tasks',{
            method:'post',headers:{ "Content-Type": "application/json","Authorization":`${localStorage.getItem('token')}`},
            body:JSON.stringify({description})
        }).then(data=>{
