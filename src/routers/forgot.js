@@ -9,7 +9,7 @@ function Forgot(){
       e.preventDefault()
       let email=document.querySelector('#input1').value
       
-      fetch(`https://todoappbackend-uwq1.onrender.com//forget`, {
+      fetch(`https://taskappbackend-ik2h.onrender.com/forget`, {
       method: "post",headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
       email
@@ -31,7 +31,7 @@ function Forgot(){
        const newpassword=document.querySelector('#input2').value
        const otp=document.querySelector('#otpvalue').value
        const email=localStorage.getItem('email')
-      fetch(`https://todoappbackend-uwq1.onrender.com/setnewpassword`, {
+      fetch(`https://taskappbackend-ik2h.onrender.com/setnewpassword`, {
       method: "post",headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
       email,newpassword,otp
