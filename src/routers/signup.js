@@ -17,7 +17,7 @@ function Signup(){
       let year=document.querySelector('#year').value;
       let age=date+"/"+month+"/"+year;
     
-      fetch(`https://taskappbackend-ik2h.onrender.com/users`,{
+      fetch(`https://taskbackend-265a.onrender.com/users`,{
          method:'post',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify({
@@ -34,7 +34,7 @@ function Signup(){
               navigate('/main');
              
           }
-          console.log(data)
+          // console.log(data)
           if(data.code===11000){
           window.alert('this email is already used')
           return;
@@ -58,7 +58,7 @@ function Signup(){
    }
    return (
      <div className="s-main-box">
-       <h1 className="s-head">todo-app</h1>
+       <h1 className="s-head">My-Task</h1>
        <div className="s-container">
          <p id="top">Create a new account</p>
          <p id="quick">it's quick and easy</p>
